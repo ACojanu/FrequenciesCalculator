@@ -12,7 +12,11 @@ public class MainApp
     public static void main( String[] args ) throws FileNotFoundException
     {
     	OutputWriterBuilder b = new OutputWriterBuilder();
-    	OutputWriter outputWriter = b.build(path);//create path constant here; if param is passed via command line, overwrite default path constant
-    	outputWriter.write();
+    	if (args.length > 0 && args[0] != null) {
+    		// if parameter is passed via command line, overwrite default path constant
+    		path = args[0];
+    	}
+   		OutputWriter outputWriter = b.build(path);
+   		outputWriter.write();
     }
 }
