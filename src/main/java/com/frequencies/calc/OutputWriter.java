@@ -3,6 +3,7 @@ package com.frequencies.calc;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.slf4j.*;
 
 /**
  * This class have methods which return or display the final result
@@ -11,7 +12,8 @@ import org.apache.log4j.Logger;
 public class OutputWriter {
 	
 	private List<Integer> outputItems;
-	final static Logger logger = Logger.getLogger(MainApp.class);
+	final static Logger loggerLog4J = Logger.getLogger(MainApp.class);
+	final static org.slf4j.Logger loggerSlf4j = LoggerFactory.getLogger(MainApp.class);
 
 	public OutputWriter() {
 		
@@ -47,19 +49,26 @@ public class OutputWriter {
 	 * @param listToPrint is the final array
 	 */
 	
-	public void runMe(List<Integer> listToPrint){
+	public void listWithLog4J(List<Integer> listToPrint) {
 		
-		if(logger.isDebugEnabled()){
-			logger.debug("This is the good output : " + listToPrint);
+		if(loggerLog4J.isDebugEnabled()){
+			loggerLog4J.debug(listToPrint);
 		}
 		
-		if(logger.isInfoEnabled()){
-			logger.info("This is info : " + listToPrint);
+		if(loggerLog4J.isInfoEnabled()){
+			loggerLog4J.info(listToPrint);
 		}
-		
-		logger.warn("This is warn : " + listToPrint);
-		logger.error("This is error : " + listToPrint);
-		logger.fatal("This is fatal : " + listToPrint);
-		
+	}	
+	/**
+	 * This method display the result using Slf4j
+	 * @param listToPrint is the final array
+	 */
+	public void listWithSlf4J(List<Integer> listToPrint) {
+		final String message = listToPrint.toString();
+		loggerSlf4j.trace(message);
+		loggerSlf4j.debug(message);
+		loggerSlf4j.info(message);
+		loggerSlf4j.warn(message);
+		loggerSlf4j.error(message);
 	}
 }

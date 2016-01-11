@@ -25,7 +25,8 @@ public class OutputWriterBuilder {
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-		owb.runMe(output);
+		owb.listWithLog4J(output);
+		owb.listWithSlf4J(output);
 		return new OutputWriter(output);
 	}
 }
