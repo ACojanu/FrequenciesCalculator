@@ -60,7 +60,7 @@ public class FreqDataProcessor {
 	}
 	
 	/**
-	 * Verify is elements from first list are in the second one and counter them
+	 * Verify if elements from first list are in the second one and counter them
 	 * @param src is the list from file
 	 * @param dest is the list that will became the final list
 	 * @param len is the length of both lists
