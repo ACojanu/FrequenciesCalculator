@@ -15,10 +15,17 @@ public class OutputWriter {
 	final static Logger loggerLog4J = Logger.getLogger(MainApp.class);
 	final static org.slf4j.Logger loggerSlf4j = LoggerFactory.getLogger(MainApp.class);
 
+	/**
+	 * Constructor without parameters
+	 */
 	public OutputWriter() {
 		
 	}
 	
+	/**
+	 * Constructor with a parameter
+	 * @param outputItems
+	 */
 	public OutputWriter(List<Integer> outputItems) {
 		this.outputItems = outputItems;
 	}
@@ -68,7 +75,5 @@ public class OutputWriter {
 		loggerSlf4j.trace(message);
 		loggerSlf4j.debug(message);
 		loggerSlf4j.info(message);
-		loggerSlf4j.warn(message);
-		loggerSlf4j.error(message);
 	}
 }

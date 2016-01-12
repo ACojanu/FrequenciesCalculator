@@ -16,7 +16,7 @@ import com.frequencies.calc.OutputWriterBuilder;
 import com.frequencies.calc.parser.FileDataParser;
 
 /**
- * In this class are made tests for all classes from this package  
+ * In this class are made tests for all classes from this project
  */
 
 public class TestResult {
@@ -34,7 +34,6 @@ public class TestResult {
 	    try {
 			assertEquals(inputList, fdp.doParse());
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	    

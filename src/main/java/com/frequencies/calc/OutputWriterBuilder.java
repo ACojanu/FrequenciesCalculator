@@ -6,7 +6,7 @@ import java.util.List;
 import com.frequencies.calc.parser.FileDataParser;
 
 /**
-  *
+  * This class use a build method which return a valid output
  */
 public class OutputWriterBuilder {
 

@@ -2,9 +2,6 @@ package com.frequencies.calc;
 
 import java.io.FileNotFoundException;
 
-/**
- * 
- */
 public class MainApp 
 {
 	private static String path = "src/main/resources/input.txt";

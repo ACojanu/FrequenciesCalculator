@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
+ * In this class is the algorithm which calculate the frequencies of number appearance in an array
+ * The number in the second line is the number of times in which the first line number show up in the second line
  */
 public class FreqDataProcessor {
 
@@ -66,7 +67,8 @@ public class FreqDataProcessor {
 	 * @return true or false
 	 */
 	public static boolean verifyFrequencies(List<Integer> src, List<Integer> dest, int len){
-		for (int i=0; i<len; i++) {
+		int i=0;
+		while(i<len) {
 			int count = 0;
 			for (int j=0; j<len; j++) {
 			    if (src.get(i) == dest.get(j)) {
@@ -76,6 +78,7 @@ public class FreqDataProcessor {
 			if (dest.get(i) != count) {
 			    return false;
 			}
+			i++;
 		}
 		return true;
 	}
