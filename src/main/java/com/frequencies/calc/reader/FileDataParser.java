@@ -36,7 +36,7 @@ public class FileDataParser {
 			salesData.add(salesDataFile.nextInt());
 	    }
 	    salesDataFile.close();
-		return salesData;
+	    return salesData;
 	}
 	
 }
