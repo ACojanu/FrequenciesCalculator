@@ -11,9 +11,9 @@ import java.util.List;
 import org.junit.Test;
 
 import com.frequencies.calc.FreqDataProcessor;
-import com.frequencies.calc.OutputWriter;
-import com.frequencies.calc.OutputWriterBuilder;
-import com.frequencies.calc.parser.FileDataParser;
+import com.frequencies.calc.reader.FileDataParser;
+import com.frequencies.writer.OutputWriter;
+import com.frequencies.writer.OutputWriterBuilder;
 
 /**
  * In this class are made tests for all classes from this project
@@ -26,7 +26,7 @@ public class TestResult {
 	private final String path = "src/main/resources/input.txt";
 	
 	@Test
-	public void testList(){
+	public void testList() {
 		OutputWriterBuilder owb = new OutputWriterBuilder();
 		OutputWriter ow = owb.build(path);
 		
@@ -40,7 +40,7 @@ public class TestResult {
 	    FreqDataProcessor freqDataPr = new FreqDataProcessor();
 	    assertEquals(list, freqDataPr.doProccessFreq(inputList));
 		
-		assertNotNull(ow.getOutputItems());
+	    assertNotNull(ow.getOutputItems());
 		assertEquals(list, ow.getOutputItems());
 	}
 

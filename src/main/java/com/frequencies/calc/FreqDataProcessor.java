@@ -11,28 +11,26 @@ import java.util.List;
 public class FreqDataProcessor {
 
 	/**
+	 * Call the method which start the process to calculate frequencies
 	 * @param input is the list from file.
 	 * @return the final list
 	 */
-	public List<Integer> doProccessFreq(List<Integer> input){	
+	public List<Integer> doProccessFreq(List<Integer> input) {	
 		List<Integer> dest = new ArrayList<Integer>(Arrays.asList(0,0,0,0,0,0,0,0,0,0));
-		int len = 10;
-		calculateFrequencies(input, dest, len);
-		System.out.println(dest);
+		calculateFrequencies(input, dest);
 		return dest;
 	}
 	
 	/**
-	 * Start the process
+	 * Here start the process to calculate the frequencies
 	 * @param src is the list from file
 	 * @param dest is the list which at the beginning is populated with 0
 	 * @param len is the length of both lists
 	 */
-	static void calculateFrequencies(List<Integer> src, List<Integer> dest, int len) {
-		while (true){
-			findFrequencies(src, dest, len);
-			System.out.println(dest);
-			if (!verifyFrequencies(src, dest, len)) {
+	private static void calculateFrequencies(List<Integer> src, List<Integer> dest) {
+		while (true) {
+			findFrequencies(src, dest);
+			if (!verifyFrequencies(src, dest)) {
 			    continue;
 			}
 			else {
@@ -47,10 +45,10 @@ public class FreqDataProcessor {
 	 * @param dest is the list that will became the final list
 	 * @param len is the length of both lists
 	 */
-	public static void findFrequencies(List<Integer> src, List<Integer> dest, int len){
-		for (int i=0; i<len; i++) {
+	private static void findFrequencies(List<Integer> src, List<Integer> dest) {
+		for (int i = 0; i < src.size(); i++) {
 			int count = 0;
-			for (int j=0; j<len; j++) {
+			for (int j = 0; j < src.size(); j++) {
 				if (src.get(i) == dest.get(j)) {
 					count++;
 			    }
@@ -66,21 +64,20 @@ public class FreqDataProcessor {
 	 * @param len is the length of both lists
 	 * @return true or false
 	 */
-	public static boolean verifyFrequencies(List<Integer> src, List<Integer> dest, int len){
-		int i=0;
-		while(i<len) {
+	private static boolean verifyFrequencies(List<Integer> src, List<Integer> dest) {
+		int i = 0;
+		while(i < src.size()) {
 			int count = 0;
-			for (int j=0; j<len; j++) {
-			    if (src.get(i) == dest.get(j)) {
-			    	count++;
+			for (int j = 0; j < src.size(); j++) {
+				if (src.get(i) == dest.get(j)) {
+					count++;
 			    }
 			}
 			if (dest.get(i) != count) {
-			    return false;
+				return false;
 			}
 			i++;
 		}
 		return true;
 	}
-
 }

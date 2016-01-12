@@ -1,4 +1,4 @@
-package com.frequencies.calc.parser;
+package com.frequencies.calc.reader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
