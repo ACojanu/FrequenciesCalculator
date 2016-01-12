@@ -12,8 +12,8 @@ import org.junit.Test;
 
 import com.frequencies.calc.FreqDataProcessor;
 import com.frequencies.calc.reader.FileDataParser;
-import com.frequencies.writer.OutputWriter;
-import com.frequencies.writer.OutputWriterBuilder;
+import com.frequencies.calc.writer.OutputWriter;
+import com.frequencies.calc.writer.OutputWriterBuilder;
 
 /**
  * In this class are made tests for all classes from this project

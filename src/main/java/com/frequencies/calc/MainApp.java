@@ -1,8 +1,9 @@
 package com.frequencies.calc;
 
 import java.io.FileNotFoundException;
-import com.frequencies.writer.OutputWriter;
-import com.frequencies.writer.OutputWriterBuilder;
+
+import com.frequencies.calc.writer.OutputWriter;
+import com.frequencies.calc.writer.OutputWriterBuilder;
 
 public class MainApp {
 	private static String path = "src/main/resources/input.txt";

@@ -6,8 +6,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.Test;
-import com.frequencies.writer.OutputWriter;
-import com.frequencies.writer.OutputWriterBuilder;
+
+import com.frequencies.calc.writer.OutputWriter;
+import com.frequencies.calc.writer.OutputWriterBuilder;
 
 public class OutputWriterBuilderTest {
 

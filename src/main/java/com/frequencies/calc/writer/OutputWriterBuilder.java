@@ -1,4 +1,4 @@
-package com.frequencies.writer;
+package com.frequencies.calc.writer;
 
 import java.io.FileNotFoundException;
 import java.util.List;
