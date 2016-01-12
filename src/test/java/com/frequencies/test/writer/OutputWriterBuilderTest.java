@@ -1,4 +1,4 @@
-package program;
+package com.frequencies.test.writer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -12,7 +12,7 @@ import com.frequencies.calc.writer.OutputWriterBuilder;
 
 public class OutputWriterBuilderTest {
 
-	private final List<Integer> list = new ArrayList<Integer>(Arrays.asList(6,2,1,0,0,0,1,0,0,0));
+	private final List<Integer> list = new ArrayList<Integer>(Arrays.asList(6, 2, 1, 0, 0, 0, 1, 0, 0, 0));
 	private final String path = "src/main/resources/input.txt";
 	
 	@Test

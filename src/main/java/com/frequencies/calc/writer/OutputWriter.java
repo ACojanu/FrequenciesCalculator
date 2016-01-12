@@ -2,8 +2,7 @@ package com.frequencies.calc.writer;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
-import org.slf4j.*;
+import org.slf4j.LoggerFactory;
 
 import com.frequencies.calc.MainApp;
 
@@ -14,7 +13,6 @@ import com.frequencies.calc.MainApp;
 public class OutputWriter {
 	
 	private List<Integer> outputItems;
-	final static Logger loggerLog4J = Logger.getLogger(MainApp.class);
 	final static org.slf4j.Logger loggerSlf4j = LoggerFactory.getLogger(MainApp.class);
 	
 	/**
@@ -42,7 +40,7 @@ public class OutputWriter {
 	/**
 	 * @return the final array for unit test 
 	 */
-	public List<Integer> getOutputItems(){
+	public List<Integer> getOutputItems() {
 		return outputItems;
 	}
 }

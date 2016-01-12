@@ -27,4 +27,4 @@ public class OutputWriterBuilder {
 			}
 		return new OutputWriter(output);
 	}
-}
+}	

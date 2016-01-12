@@ -33,9 +33,9 @@ public class FileDataParser {
 		
 		Scanner salesDataFile = new Scanner(new File(path));
 		List<Integer> salesData = new ArrayList<Integer>();
-		 while (salesDataFile.hasNextInt()) {
-	            salesData.add(salesDataFile.nextInt());
-	        }
+		while (salesDataFile.hasNextInt()) {
+			salesData.add(salesDataFile.nextInt());
+	    }
 	    salesDataFile.close();
 		return salesData;
 	}
