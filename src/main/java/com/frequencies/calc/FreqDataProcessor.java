@@ -16,7 +16,7 @@ public class FreqDataProcessor {
 	 * @return the final list
 	 */
 	public List<Integer> doProccessFreq(List<Integer> input) {	
-		List<Integer> dest = new ArrayList<Integer>(Arrays.asList(0,0,0,0,0,0,0,0,0,0));
+		List<Integer> dest = new ArrayList<Integer>(Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
 		calculateFrequencies(input, dest);
 		return dest;
 	}

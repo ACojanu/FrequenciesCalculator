@@ -20,11 +20,11 @@ public class OutputWriterBuilder {
 		FileDataParser fdp = new FileDataParser(path);
 		FreqDataProcessor freqData = new FreqDataProcessor();
 		List<Integer> output = null;
-			try {
-				output = freqData.doProccessFreq(fdp.doParse());
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
+		try {
+			output = freqData.doProccessFreq(fdp.doParse());
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		return new OutputWriter(output);
 	}
 }	

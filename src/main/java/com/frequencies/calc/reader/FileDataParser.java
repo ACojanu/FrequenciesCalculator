@@ -30,7 +30,6 @@ public class FileDataParser {
 	 * @throws FileNotFoundException
 	 */
 	public List<Integer> doParse() throws FileNotFoundException {
-		
 		Scanner salesDataFile = new Scanner(new File(path));
 		List<Integer> salesData = new ArrayList<Integer>();
 		while (salesDataFile.hasNextInt()) {
