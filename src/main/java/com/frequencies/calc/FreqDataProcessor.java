@@ -28,14 +28,10 @@ public class FreqDataProcessor {
 	 * @param len is the length of both lists
 	 */
 	private static void calculateFrequencies(List<Integer> src, List<Integer> dest) {
-		while (true) {
+		boolean valid = ResultFrequenciesValidator.validate(src, dest);
+		while (!valid) {
 			findFrequencies(src, dest);
-			if (!verifyFrequencies(src, dest)) {
-			    continue;
-			}
-			else {
-			    break;
-			}
+			valid = ResultFrequenciesValidator.validate(src, dest);
 		}
 	}
 	
@@ -55,29 +51,5 @@ public class FreqDataProcessor {
 			}
 			dest.set(i, count);
 		}
-	}
-	
-	/**
-	 * Verify if elements from first list are in the second one and counter them
-	 * @param src is the list from file
-	 * @param dest is the list that will became the final list
-	 * @param len is the length of both lists
-	 * @return true or false
-	 */
-	private static boolean verifyFrequencies(List<Integer> src, List<Integer> dest) {
-		int i = 0;
-		while(i < src.size()) {
-			int count = 0;
-			for (int j = 0; j < src.size(); j++) {
-				if (src.get(i) == dest.get(j)) {
-					count++;
-			    }
-			}
-			if (dest.get(i) != count) {
-				return false;
-			}
-			i++;
-		}
-		return true;
 	}
 }
